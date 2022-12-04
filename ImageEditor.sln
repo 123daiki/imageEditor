@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ImageEditor", "ImageEditor\ImageEditor.pyproj", "{1F698688-FB75-45A5-8D1F-92162BD1D188}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F698688-FB75-45A5-8D1F-92162BD1D188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F698688-FB75-45A5-8D1F-92162BD1D188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A68B3292-43E6-41D9-8CF0-22FA4D022442}
+	EndGlobalSection
+EndGlobal

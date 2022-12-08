@@ -1,0 +1,95 @@
+#:kivy 1.0.9
+
+<MenuButton>:
+    size_hint_x: None if not root.inside_group else 1
+    width: self.texture_size[0] + 32
+    Image:
+        allow_stretch: True
+        opacity: 1 if root.icon else 0
+        source: root.icon
+        pos: root.x + 4, root.y + 4
+        size: root.width - 8, root.height - 8
+
+<MenuSubmenu>:
+    size_hint_x: None
+    width: self.texture_size[0] + 32
+    triangle: (self.right-14, self.y+7, self.right-7, self.y+7, self.right-7, self.y+14)
+    canvas.after:
+        Color:
+            rgba: self.separator_color
+        Triangle:
+            points: self.triangle
+
+<MenuButton,MenuSubmenu>:
+    background_normal: ""
+    background_down: ""
+    background_color: self.background_color_down if self.state=='down' else self.background_color_normal
+    color: self.text_color
+
+<MenuEmptySpace>:
+    size_hint_x: 1
+
+<MenuItem>:
+    background_color: self.background_color_normal
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    canvas.after:
+        Color:
+            rgba: self.separator_color
+        Line:
+            rectangle: self.x,self.y,self.width,self.height
+
+<MenuBar>:
+    size_hint_y: None
+    height: 48
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    canvas.after:
+        Color:
+            rgba: self.separator_color
+        Line:
+            rectangle: self.x, self.y, self.width, self.height
+
+BoxLayout:
+    orientation: "vertical"
+
+    MenuBar:
+        MenuButton:
+            icon: "./ImageEditor/icons/outtext@2x.png"
+            width: 100
+        MenuButton:
+            text: "Button 1"
+            on_release: app.button(1)
+        MenuSubmenu:
+            text: "Submenu 2"
+            MenuButton:
+                text: "Button 21"
+                on_release: app.button(21)
+            MenuButton:
+                text: "Button 22"
+                on_release: app.button(22)
+            MenuButton:
+                text: "Button 23"
+                on_release: app.button(23)
+        MenuEmptySpace:
+        MenuSubmenu:
+            text: "Submenu 3"
+            MenuButton:
+                text: "Button 31"
+                on_release: app.button(31)
+
+    Button:
+        text: "Nothing"
+        background_color: 0.4, 0.4, 0.4, 1
+        background_normal: ""
+
+    MenuBar:
+        height: 30

@@ -1,5 +1,5 @@
 #:kivy 1.0.9
-
+#:import hex kivy.utils.get_color_from_hex
 <MenuButton>:
     size_hint_x: None if not root.inside_group else 1
     width: self.texture_size[0] + 32
@@ -33,7 +33,7 @@
     background_color: self.background_color_normal
     canvas.before:
         Color:
-            rgba: self.background_color
+            rgba: hex("#464646")
         Rectangle:
             pos: self.pos
             size: self.size
@@ -45,7 +45,7 @@
 
 <MenuBar>:
     size_hint_y: None
-    height: 48
+    height: 26
     canvas.before:
         Color:
             rgba: self.background_color
@@ -64,9 +64,9 @@ BoxLayout:
     MenuBar:
         MenuButton:
             icon: "./ImageEditor/icons/outtext@2x.png"
-            width: 100
+            width: 20
         MenuButton:
-            text: "Button 1"
+            text: "File"
             on_release: app.button(1)
         MenuSubmenu:
             text: "Submenu 2"

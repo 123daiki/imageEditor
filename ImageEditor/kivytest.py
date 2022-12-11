@@ -11,6 +11,8 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.spinner import Spinner
 from kivy.properties import ListProperty, ObjectProperty,\
         StringProperty, BooleanProperty, NumericProperty
+from kivy.core.window import Window
+Window.size = (720, 480)
 #from kivy.uix.actionbar import ActionBar, ActionView, ActionGroup, ActionButton
 
 class MenuItem(Widget):

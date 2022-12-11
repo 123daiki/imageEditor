@@ -1,0 +1,78 @@
+#:import hex kivy.utils.get_color_from_hex
+<RootWidget>:
+    canvas.before:
+        Color:
+            rgba: hex("#343434")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+        pos_hint: {"x":0, "top":1}
+        size_hint: (None,None)
+        size:(self.x, 25)
+        spacing:3
+        canvas:
+            Color:
+                rgba: hex("#343434")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Menubar:
+            text: "File"
+            font_size:11
+            values: "save", "export"
+            size_hint: None,None
+            size: 56,22
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+        Button:
+            text: "Nothing"
+            font_size:11
+            background_color: 0.4, 0.4, 0.4, 1
+            background_normal: ""
+            size_hint: None,None
+            size: 56,22
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+        Button:
+            #text: "Nothing"
+            size_hint: None,None
+            size: 56,22
+            background_color: hex("#343434")
+            on_press: root.hi_on()
+            on_release: root.hi_off()
+            center_x: self.parent.center_x
+            center_y: self.parent.center_y
+            Image:
+                id:menubuttonsource
+                source:"icons/top_button.png"
+                size: 56,22
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+    BoxLayout:
+        orientation: "horizontal"
+        BoxLayout:
+            orientation: "vertical"
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: 1,1,0,1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: 0,1,1,1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+        BoxLayout:
+            canvas:
+                Color:
+                    rgba: 0,0,1,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size

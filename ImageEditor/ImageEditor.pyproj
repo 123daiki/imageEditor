@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1f698688-fb75-45a5-8d1f-92162bd1d188</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ImageEditor.py</StartupFile>
+    <StartupFile>kivy0.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,31 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Convert.py" />
     <Compile Include="ImageEditor.py" />
-    <Compile Include="UI_functions.py">
+    <Compile Include="kivy0.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="kivytest.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\outblock-align-bottom%402x.png" />
+    <Content Include="icons\outblock-align-horizontally%402x.png" />
+    <Content Include="icons\outblock-align-left%402x.png" />
+    <Content Include="icons\outblock-align-right%402x.png" />
+    <Content Include="icons\outblock-align-top%402x.png" />
+    <Content Include="icons\outblock-align-vertically%402x.png" />
+    <Content Include="icons\outblock-distribute-horizontally%402x.png" />
+    <Content Include="icons\outblock-distribute-vertically%402x.png" />
+    <Content Include="icons\outrotate-left%402x.png" />
+    <Content Include="icons\outsegment%402x.png" />
+    <Content Include="icons\outselect%402x.png" />
+    <Content Include="icons\outtext%402x.png" />
+    <Content Include="main.kv" />
+    <Content Include="test.kv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

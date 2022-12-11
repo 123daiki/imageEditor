@@ -8,7 +8,7 @@ class ui4imageEditor(tk.Frame):
         event.widget['bg'] = '#585858'
     def displaybuttons(self, frame_tool):
             #画像ファイルの検索
-            path_tool_icon = "./ImageEditor/icons"
+            path_tool_icon = "./icons"#/ImageEditor
             list_tool_icon = os.listdir(path_tool_icon)
             path_array_tool_icon = []
             for fname in range(len(list_tool_icon)):
